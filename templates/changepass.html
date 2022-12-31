@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Change Password
+{% endblock %}
+
+{% block main %}
+    <h2>Change personal password</h2>
+    <p> In order to change your password please follow this security instructions.</p>
+    <form action="/change_password" method="post">
+        <div class="row mb-3 ">
+            <div class="col-5 text-end "><p class="d-inline"><span class="align-middle">Username</span></p></div>
+            <div class="col-7 text-start">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto d-inline align-middle" id="user" name="username" placeholder="Username" type="text">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-5 text-end"><p class="d-inline"><span class="align-middle">Verify Password</span></p></div>
+            <div class="col-7 text-start">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto d-inline" id="pass" name="password" placeholder="Type actual Password" type="password">
+            </div>
+        </div>
+        <div class="row mb-3 justify-content-center">
+            <div class="col-5 text-end"><p class="d-inline"><span class="align-middle">Confirmation</span></p></div>
+            <div class="col-7 text-start">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto d-inline" id="newpass" name="newpassword" placeholder="Enter New Password" type="password">
+            </div>
+        </div>
+        <div class="row mb-3 justify-content-center">
+            <div class="col-5 text-end"><p class="d-inline"><span class="align-middle">Confirmation</span></p></div>
+            <div class="col-7 text-start">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto d-inline" id="newpwconf" name="newconfirmation" placeholder="Retype password" type="password">
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Register</button>
+    </form>
+{% endblock %}

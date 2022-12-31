@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Finance
+{% endblock %}
+
+{% block main %}
+    <table class="table table-hover justify-content-center">
+        <thead>
+            <tr scope="row">
+                <th scope="col">Stock</th>
+                <th scope="col">Shares</th>
+                <th scope="col">Price</th>
+                <th scope="col">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--Jinja Loop rows-->
+            {% for holding in holdings %}
+                <tr scope="row">
+                    <td scope="col-3">{{ holding["stock"] }}</td>
+                    <td scope="col-3">{{ holding["shares"] }}</td>
+                    <td scope="col-3">{{ holding["price"] }}</td>
+                    <td scope="col-3">{{ holding["value"] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!--Display cash-->
+    <div class="text-start" >
+        <p>Total cash available: {{ total_cash }}</p>
+    </div>
+
+    <!--Display grand total-->
+    <div>
+        <h1>{{ total_holdings }}</h1>
+        <p>Holdings Total Value</p>
+    </div>
+
+{% endblock %}

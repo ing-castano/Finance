@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ symbol }}
+{% endblock %}
+
+{% block main %}
+    <div class="text-start">
+        <h3>{{ name }}</h3>
+    </div>
+    <div class="text-start">
+        <h4>Symbol: {{ symbol }}</h4>
+    </div>
+    <div class="mb-0 pb-0 text-center">
+        <h1 class="mb-0 pb-0">{{ price }} usd</h1>
+    </div>
+    <div class="mb-0 text-center">
+        <p>stock price</p>
+    </div>
+
+{% endblock %}
