@@ -28,9 +28,21 @@ By the use of two files, *app.py* and *helpers.py* holds the server configuratio
 
 Session files let the user stay logged in using local machine systema cookies.
 
-`app.py` - Holds the logic to show current stock 
+`app.py` - Holds the logic to: 
+* `@app.route("/")` show current stocks
+* `@app.route("/buy")` buy stocks
+* `@app.route("/sell")`sell stocks
+* `@app.route("/register")` - `@app.route("/login")` - `@app.route("/logout")` register/logs user
+* `@app.route("/history")`show all the transactions from logged user
+* `@app.route("/quote")`show the current price of the selected stock
+* `@app.route("/change_password")`let the user change the password
 
-`helpers.py` - 
+
+`helpers.py` - Holds some auxiliary functions as:
+*`apology` function: Run memegen from jace browning github project to automate user msgs
+*`login_required` function: Decorated function to prevent unlogged user to access certain functionalities
+*`lookup` function: Uses Alpha Vantage API to ask for stock financial information. API key is free and is already loaded into the .py file.
+*`usd` function: Format function to style float with USD money style.
 
 ### SQL Databases
 #### users table
