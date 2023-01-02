@@ -39,10 +39,10 @@ Session files let the user stay logged in using local machine systema cookies.
 
 
 `helpers.py` - Holds some auxiliary functions as:
-*`apology` function: Run memegen from jace browning github project to automate user msgs
-*`login_required` function: Decorated function to prevent unlogged user to access certain functionalities
-*`lookup` function: Uses Alpha Vantage API to ask for stock financial information. API key is free and is already loaded into the .py file.
-*`usd` function: Format function to style float with USD money style.
+* `apology` function: Run memegen from jace browning github project to automate user msgs
+* `login_required` function: Decorated function to prevent unlogged user to access certain functionalities
+* `lookup` function: Uses Alpha Vantage API to ask for stock financial information. API key is free and is already loaded into the .py file.
+* `usd` function: Format function to style float with USD money style.
 
 ### SQL Databases
 #### users table
